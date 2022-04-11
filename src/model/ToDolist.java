@@ -43,16 +43,18 @@ public class ToDolist implements Loadable, Saveable {
             string = i + ". " + regularItem.getItemName();
 
             i++;
+            System.out.println(string);
             return string;
 
         }
         return string;
     }
 
-    public void DoneList(){
+    public String DoneList(){
         for (Item doneRegularItem : doneItems) {
-            System.out.println("- " + doneRegularItem.getItemName());
+            return doneRegularItem.getItemName();
         }
+        return null;
     }
 
 
