@@ -104,7 +104,6 @@ public class Main {
                     ta.append("\nItem removed");
                     ta.append("\nWhat would you like to do [1] add a to do list item, [2] cross off an item [3] show all the items\n");
                 }
-                toDolist.save();
             }
         });
 
@@ -151,7 +150,7 @@ public class Main {
         */
 
 
-
+        toDolist.save();
     }
 
 }
