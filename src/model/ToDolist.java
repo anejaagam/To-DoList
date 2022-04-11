@@ -121,14 +121,14 @@ public class ToDolist implements Loadable, Saveable {
         if (urgentItems.size() + regularItems.size() == 10){
             throw new TooManyThingsToDo();
         }
-        if(urgent== "Y"){
+        if(urgent.equals("Y")){
             UrgentItem urgentItem = new UrgentItem(item,date,true);
             if(!(urgentItem.Location.contains(this))){
                 urgentItem.Location(this);
             }
             urgentItems.add(urgentItem);
         }
-        else if (urgent == "N"){
+        else if (urgent.equals("N")){
             RegularItem regularItem = new RegularItem(item,date);
             if(!(regularItem.Location.contains(this))){
                 regularItem.Location(this);
